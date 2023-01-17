@@ -7,7 +7,7 @@ from django.db import models
 class Post(models.Model):
     rasm = models.ImageField(upload_to='images/talaba', blank=True, null=True)
     sarlavha = models.CharField(max_length=100,help_text="Matn")
-    vaqt = models.DateField()
+    vaqt = models.DateTimeField(auto_now_add=True)
     text = models.TextField(help_text="Matn")
 
     def __str__(self):
